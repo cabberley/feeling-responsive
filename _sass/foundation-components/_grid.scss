@@ -3,7 +3,7 @@
 // Licensed under MIT Open Source
 
 @import "global";
-
+@use "sass:math";
 //
 // @variables
 //
@@ -29,8 +29,8 @@ $last-child-float: $opposite-direction !default;
 // $colNumber - Found in settings file
 // $totalColumns - Found in settings file
 @function grid-calc($colNumber, $totalColumns) {
-  // @return percentage(math.div($colNumber , $totalColumns));
-  @return percentage(calc($colNumber / $totalColumns));
+  @return percentage(math.div($colNumber , $totalColumns));
+  // @return percentage(calc($colNumber / $totalColumns));
 }
 
 //
